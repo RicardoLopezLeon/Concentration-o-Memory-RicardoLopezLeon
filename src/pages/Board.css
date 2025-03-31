@@ -1,0 +1,7 @@
+.board__card:hover {
+  transform: scale(1.05);
+}
+
+.board__card.flipped {
+  transform: rotateY(180deg);
+}

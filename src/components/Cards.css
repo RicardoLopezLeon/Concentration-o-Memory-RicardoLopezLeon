@@ -1,0 +1,21 @@
+.card__inner {
+    transition: transform 0.6s;
+}
+
+.card.flipped .card__inner {
+    transform: rotateY(180deg);
+}
+
+  @media screen and (max-width: 800px) {
+    .card{
+        width: 100px;
+        height: 187px;
+    }    
+  }
+
+  @media screen and (max-width: 400px) {
+    .card{
+        width: 90px;
+        height: 173px;
+    }    
+  }

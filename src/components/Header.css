@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+.header__success{
+  background: #D9AD26;
+}
+
+.header__errors{
+  background: #D9AD26;
+}
+
+.header__success-title{
+  font-family: 'Courier New', 'Monaco', 'Liberation Mono';
+}
+
+.header__errors-title{
+  font-family: 'Courier New', 'Monaco', 'Liberation Mono';
+}
+
+.header__success-score{
+  font-family: 'DS-Digital', 'Digital-7';
+}
+
+.header__errors-score{
+  font-family: 'DS-Digital', 'Digital-7';
+}
