@@ -4,6 +4,7 @@ import Board from './pages/Board'
 import { useDispatch, useSelector } from 'react-redux'
 import { addName } from './redux/userSlice'
 import Header from './components/Header'
+import Swal from 'sweetalert2'
 
 function App() {
 
@@ -11,9 +12,13 @@ function App() {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    const getName = () => {
+    const getName = async() => {
       if(userName===""){
-        const uname = prompt('Please, insert your Name')
+        const {value: uname} = await Swal.fire({
+          input: "text",
+          inputLabel: "Please, enter your name",
+          inputPlaceholder: "Example: Ricardo Lopez"
+        });
         if(uname != ""){
           dispatch(addName(uname))
         }

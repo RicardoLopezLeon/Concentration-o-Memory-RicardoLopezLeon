@@ -5,6 +5,7 @@ import Cards from "../components/Cards";
 import { addError, addSuccess, resetPoints } from "../redux/pointsSlice";
 import { getAnimals } from "../utils/ConsumingAPIs";
 import "./Board.css"
+import Swal from "sweetalert2";
 
 function Board(){
 
@@ -36,8 +37,12 @@ function Board(){
     useEffect(() => {
         if(success===20){
             setTimeout(() => {
-                    alert(`Congratulation ${userName.name} you complete the game`)
-            },1000)
+                    Swal.fire({
+                        title: `Congratulation ${userName.name}`,
+                        text: 'You complete the game',
+                        icon: 'success'
+                    })
+            },700)
         }
     },[success])
 
@@ -76,7 +81,9 @@ function Board(){
             <div className="board__container flex flex-wrap justify-evenly gap-4">
                 {animals.map((animal,index) => (
                     <div key={index} className={`board__card flex justify-center items-center transition-transform duration-600 transform preserve-3d cursor-pointer rounded-xl ${animalsSelected[index]?'flipped ':''}`}
-                    onClick={() => !animalsSelected[index]?verificateCard(index):null}
+                    onClick={() => 
+                        !animalsSelected[index]?verificateCard(index):Swal.fire({title:'This card is already flipped', icon:'warning',showConfirmButton: false,timer: 1000})
+                    }
                     style={{pointerEvents:`${loadSelect?"none":"auto"}`}}>
                         <Cards urlanimal={animal.fields.image.url} name={animal.meta.name} isFlipped={animalsSelected[index]} /> 
                     </div>

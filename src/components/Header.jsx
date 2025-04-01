@@ -6,12 +6,16 @@ function Header(){
 
     const userName = useSelector((state) => state.user)
     const point = useSelector((state) => state.points)
+    const time = new Date().getHours()
 
     return(
         <div className="header flex flex-col md:flex-row items-center justify-around bg-gray-500 text-white p-4 shadow-2xl w-full">
             <div className="header__title text-center md:text-left">
                 <p className="text-xl sm:text-2xl md:text-3xl font-bold">
-                    Have a good game, {userName.name}
+                    {
+                        (time>=6 && time<12)?"Good morning, ":(time>=12 && time<17)?"Good afternoon, ":(time>=17 && time<22)?"Good evening, ":"Good night, "
+                        
+                    }{userName.name}
                 </p>
             </div>
             <div className="header__points flex flex-col sm:flex-row items-center border-2 border-black rounded-lg mt-4 md:mt-0">
