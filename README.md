@@ -25,8 +25,8 @@ Concentration o Memory fue desarrollado con React v19+.
 Descargar el proyecto desde el reposirotio de GitHub y posteriormente instalar las dependencias.
 
 ```sh
-git clone https://github.com/RicardoLopezLeon/Desafio-RicadoLopezLeon
-cd Concentratio-o-Memory-RicardoLopezLeon
+git clone https://github.com/RicardoLopezLeon/Concentration-o-Memory-RicardoLopezLeon
+cd Concentration-o-Memory-RicardoLopezLeon
 npm install
 ```
 
