@@ -39,13 +39,15 @@ npm run dev
 ```
 Despues de ejeutar el script para el funcionamiento del proyecto en desarrollo se debe ingresar en el navegador la url siguiente: http://localhost:5173/
 
+
 Para entorno de producción...
 
 ```sh
 npm run build
 npm run preview
 ```
-Despues de ejeutar el script para el funcionamiento del proyecto en producción se debe ingresar en el navegador la url siguiente: [http://localhost:4173/](http://localhost:4173/)
+Despues de ejeutar el script para el funcionamiento del proyecto en producción se debe ingresar en el navegador la url siguiente: http://localhost:4173/
+
 
 ## Observaciones
 
